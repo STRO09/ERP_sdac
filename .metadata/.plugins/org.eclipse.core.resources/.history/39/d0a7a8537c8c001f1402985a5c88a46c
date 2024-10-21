@@ -1,0 +1,22 @@
+package interfaces;
+
+import products.ProductsPojo;
+
+public interface Seller {
+	public void addProduct(ProductsPojo productsPojo);
+
+	void updateProduct(int product_id, String product_name, int quantity, double price);
+
+	void deleteProduct(int product_id);
+
+	void viewProducts();
+
+	void updateOrderStatus(int order_id);
+
+	void resolveIssue(int report_id);
+
+	void viewIssues();
+
+	void viewOrders();
+
+}

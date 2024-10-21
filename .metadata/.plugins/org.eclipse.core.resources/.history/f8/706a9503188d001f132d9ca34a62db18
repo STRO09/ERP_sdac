@@ -1,0 +1,33 @@
+package interfaces;
+
+import java.util.List;
+
+import orders.OrdersPojo;
+import products.ProductsPojo;
+import reportedproducts.ReportedProductsPojo;
+
+public interface Consumer {
+
+	void RegisterConsumer(int con_port_id,String password, String role);
+
+	public boolean LoginConsumer(int con_port_id, int password);
+
+	void updatePortid(int new_portid);
+
+	void updatePassword(int new_password);
+
+	void updateLocation(String new_location);
+
+	void reportProduct(int product_id,String issue_type);
+
+	public List<ReportedProductsPojo> viewReports();
+
+	public List<ProductsPojo> viewProducts();
+
+	public void Placeorder(int product_id, int quantitys);
+
+	void CancelOrder(int order_id);
+
+	public List<OrdersPojo> viewOrders();
+
+}

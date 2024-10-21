@@ -1,0 +1,14 @@
+package jdbc;
+
+import java.sql.Connection;
+
+public class GetConnection {
+	public static Connection connect() {
+		Connection connection = null;
+		
+		
+		return connection;
+		// TODO Auto-generated method stub
+
+	}
+}

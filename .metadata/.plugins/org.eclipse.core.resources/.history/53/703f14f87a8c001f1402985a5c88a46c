@@ -1,0 +1,20 @@
+package interfaces;
+
+public interface Seller {
+	void addProduct();
+
+	void updateProduct();
+
+	void deleteProduct();
+
+	void viewProduct();
+
+	void updateOrderStatus();
+
+	void resolveIssue();
+
+	void viewIssues();
+
+	void viewOrders();
+
+}

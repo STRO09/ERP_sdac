@@ -1,0 +1,36 @@
+package models;
+
+public class SellerPojo {
+	private int sel_port_id;
+	private String sel_password;
+	private String role;
+
+	public int getPort_id() {
+		return sel_port_id;
+	}
+
+	public void setPort_id(int port_id) {
+		this.sel_port_id = port_id;
+	}
+
+	public String getPassword() {
+		return sel_password;
+	}
+
+	public void setPassword(String password) {
+		this.sel_password = password;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
+	public void RegisterSeller() {
+		// TODO Auto-generated method stub
+
+	}
+}

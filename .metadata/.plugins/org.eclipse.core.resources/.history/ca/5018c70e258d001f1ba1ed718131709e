@@ -1,0 +1,73 @@
+package implementors;
+
+import java.util.List;
+
+import interfaces.Seller;
+import orders.OrdersPojo;
+import products.ProductsPojo;
+import reportedproducts.ReportedProductsPojo;
+import seller.SellerPojo;
+
+public class SellerImplementor implements Seller{
+
+	@Override
+	public void RegisterSeller(SellerPojo sellerPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean LoginSeller(SellerPojo sellerPojo) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void addProduct(ProductsPojo productsPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateProduct(ProductsPojo productsPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteProduct(ProductsPojo productsPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<ProductsPojo> viewProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateOrderStatus(OrdersPojo ordersPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void resolveIssue(ReportedProductsPojo reportedProductsPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<ReportedProductsPojo> viewIssues() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<OrdersPojo> viewOrders() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

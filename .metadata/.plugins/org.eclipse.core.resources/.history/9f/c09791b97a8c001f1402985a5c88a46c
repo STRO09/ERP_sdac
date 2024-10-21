@@ -1,0 +1,31 @@
+package interfaces;
+
+import java.util.List;
+
+import products.ProductsPojo;
+
+public interface Consumer {
+
+	void Register(int con_port_id,String password, String role);
+
+	public boolean Login(int con_port_id, int password);
+
+	void updatePortid(int new_portid);
+
+	void updatePassword(int new_password);
+
+	void updateLocation(String new_location);
+
+	void reportProduct();
+
+	void viewReports();
+
+	public List<ProductsPojo> viewProducts();
+
+	public void Placeorder();
+
+	void CancelOrder();
+
+	void viewOrders();
+
+}

@@ -1,0 +1,20 @@
+package interfaces;
+
+public interface Seller {
+	void addProduct(int product_id, String product_name, int quantity, double price);
+
+	void updateProductprice();
+
+	void deleteProduct();
+
+	void viewProduct();
+
+	void updateOrderStatus();
+
+	void resolveIssue();
+
+	void viewIssues();
+
+	void viewOrders();
+
+}

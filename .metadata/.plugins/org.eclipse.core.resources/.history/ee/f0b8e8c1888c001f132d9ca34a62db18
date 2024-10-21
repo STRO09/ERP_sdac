@@ -1,0 +1,8 @@
+package jdbc;
+
+public class GetConnection {
+	public static Connection connect() {
+		// TODO Auto-generated method stub
+
+	}
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="interfaces.Consumer"/>
+    <fullyQualifiedTypeName name="consumer.ConsumerPojo"/>
+    <fullyQualifiedTypeName name="interfaces.Seller"/>
+    <fullyQualifiedTypeName name="seller.SellerPojo"/>
+    <fullyQualifiedTypeName name="products.ProductsPojo"/>
+    <fullyQualifiedTypeName name="reportedproducts.ReportedProductsPojo"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="orders.OrdersPojo"/>
+    <fullyQualifiedTypeName name="models.ProductsPojo"/>
+    <fullyQualifiedTypeName name="models.SellerPojo"/>
+    <fullyQualifiedTypeName name="models.ReportedProductsPojo"/>
+    <fullyQualifiedTypeName name="java.sql.CallableStatement"/>
+    <fullyQualifiedTypeName name="jdbc.GetConnection"/>
+    <fullyQualifiedTypeName name="models.OrdersPojo"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="implementors.ConsumerImplementor"/>
+    <fullyQualifiedTypeName name="models.ConsumerPojo"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+</qualifiedTypeNameHistroy>

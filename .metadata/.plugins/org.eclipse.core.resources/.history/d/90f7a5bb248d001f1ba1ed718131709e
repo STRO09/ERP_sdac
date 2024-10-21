@@ -1,0 +1,89 @@
+package implementors;
+
+import java.io.IOException;
+import java.sql.CallableStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import consumer.ConsumerPojo;
+import interfaces.Consumer;
+import jdbc.GetConnection;
+import orders.OrdersPojo;
+import products.ProductsPojo;
+import reportedproducts.ReportedProductsPojo;
+
+public class ConsumerImplementor implements Consumer{
+
+	CallableStatement callableStatement = null;
+	@Override
+	public void RegisterConsumer(ConsumerPojo consumerPojo) {
+		// TODO Auto-generated method stub
+		try {
+			callableStatement = GetConnection.connect().prepareCall("CALL RegisterUser(?,?,?,?)");
+			callableStatement.setInt(1, consumerPojo.getCon_port_id());
+			callableStatement.setString(2, consumerPojo.getCon_password());
+			callableStatement.setString(3, consumerPojo.getLocation());
+			callableStatement.setString(4, consumerPojo.getRole());
+			callableStatement.execute();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public boolean LoginConsumer(ConsumerPojo consumerPojo) {
+		// TODO Auto-generated method stub
+		callableStatement = GetConnection.connect().prepareCall("CALL RegisterUser(?,?,?,?)");
+		callableStatement.setInt(1, consumerPojo.getCon_port_id());
+		callableStatement.setString(2, consumerPojo.getCon_password());
+		return false;
+	}
+
+	@Override
+	public void updateProfile(ConsumerPojo consumerPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void reportProduct(ReportedProductsPojo productsPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<ReportedProductsPojo> viewReports() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProductsPojo> viewProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void Placeorder(OrdersPojo ordersPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void CancelOrder(OrdersPojo ordersPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<OrdersPojo> viewOrders() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

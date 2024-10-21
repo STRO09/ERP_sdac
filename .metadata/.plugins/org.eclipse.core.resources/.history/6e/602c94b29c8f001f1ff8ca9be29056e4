@@ -1,0 +1,27 @@
+<form method="post" action="/RegisterServlet">
+		
+<table>
+<tr>
+	<td>Port ID: </td>
+	<td><input type="text" name="portid"></td>
+</tr>
+<tr>
+	<td>Password: </td>
+	<td><input type="text" name="password"></td>
+</tr>
+<tr>
+	<td>Location: </td>
+	<td><input type="text" name="location"></td>
+</tr>
+<tr>
+	<td>Role: </td>
+	<td><input type="radio" name="role" value ="Consumer"></td>
+	<td><input type="radio" name="role" value = "Seller"></td>
+
+</tr>
+<tr>
+	<td><input type="submit">Register</td>
+	<td><input type="reset">Reset</td>
+</tr>
+</table>
+	</form>

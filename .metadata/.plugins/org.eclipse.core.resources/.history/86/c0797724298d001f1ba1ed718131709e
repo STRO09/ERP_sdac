@@ -1,0 +1,112 @@
+package implementors;
+
+import java.io.IOException;
+import java.sql.CallableStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import interfaces.Seller;
+import jdbc.GetConnection;
+import orders.OrdersPojo;
+import products.ProductsPojo;
+import reportedproducts.ReportedProductsPojo;
+import seller.SellerPojo;
+
+public class SellerImplementor implements Seller{
+
+	CallableStatement callableStatement = null;
+	@Override
+	public void RegisterSeller(SellerPojo sellerPojo) {
+		// TODO Auto-generated method stub
+		try {
+			callableStatement = GetConnection.connect().prepareCall("CALL RegisterUser(?,?,?,?)");
+			callableStatement.setInt(1, sellerPojo.getPort_id());
+			callableStatement.setString(2, sellerPojo.getPassword());
+			callableStatement.setString(3, "NULL");
+			callableStatement.setString(4, sellerPojo.getRole());
+			callableStatement.execute();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public boolean LoginSeller(SellerPojo sellerPojo) {
+		// TODO Auto-generated method stub
+		boolean auth_status = false;
+		int auth_int = 0;
+		
+		try {
+			callableStatement = GetConnection.connect().prepareCall("CALL AuthenticateUser(?,?,?)");
+			callableStatement.setInt(1, sellerPojo.getPort_id());
+			callableStatement.setString(2, sellerPojo.getPassword());
+			auth_int =callableStatement.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		if(auth_int == 1) {
+			auth_status = true;
+		}
+
+		return auth_status;
+	}
+
+	@Override
+	public void addProduct(ProductsPojo productsPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateProduct(ProductsPojo productsPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteProduct(ProductsPojo productsPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<ProductsPojo> viewProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateOrderStatus(OrdersPojo ordersPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void resolveIssue(ReportedProductsPojo reportedProductsPojo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<ReportedProductsPojo> viewIssues() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<OrdersPojo> viewOrders() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

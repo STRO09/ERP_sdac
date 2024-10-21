@@ -1,0 +1,25 @@
+package interfaces;
+
+import java.util.List;
+
+import products.ProductsPojo;
+
+
+public interface Seller {
+	public void addProduct(ProductsPojo productsPojo);
+
+	void updateProduct(ProductsPojo productsPojo);
+
+	void deleteProduct(int product_id);
+
+	public List<ProductsPojo> viewProducts();
+
+	void updateOrderStatus(int order_id);
+
+	void resolveIssue(int report_id);
+
+	void viewIssues();
+
+	void viewOrders();
+
+}
